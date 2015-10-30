@@ -1,0 +1,12 @@
+<%= form_for :OTP, url: api_v1_otp_path do |f| %>
+  <p>
+    <%= f.label :contact_no %><br>
+    <%= f.text_field :c_no %>
+  </p>
+
+  <p>
+    <%= f.submit :OTP %>
+  </p>
+<% end %>
+
+

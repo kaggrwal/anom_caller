@@ -2,10 +2,11 @@ AnomCaller::Application.routes.draw do
 
   root :to => 'welcome#index'
 
-  namespace :api, defaults: {format: 'json'} do
+  namespace :api do
     # v1 api
     namespace :v1 do
-      get "otp" => "otp#index"
+      get  "otp" => "otp#index" 
+      post "otp" => "otp#sha1", :defaults => {:format => 'json'}
       #resources :otp
     end
   end
